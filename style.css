@@ -3,120 +3,108 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.titulo {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2rem;
+}
+
+/* 3. Fondo con transparencia */
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
+    text-align: center;
     padding: 2em;
     min-height: 100vh;
     width: 100vw;
-    background: rgba(0, 0, 0, 0.4) url("galeria/pexels-pixabay-2150.jpg") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background: rgba(0, 0, 0, 0.4) url('galeria/pexels-pixabay-2150.jpg') no-repeat center center;
+    background-size: cover; /* 6. Ajuste de tamaño */
+    background-position: center center; /* 5. Posicionamiento */
+    background-attachment: fixed; /* 7. Desplazamiento fijo */
 }
 
+/* Estilos de las cards generales */
 .card {
-    background-color: #ffffff;
+    display: inline-block;
     width: 300px;
-    padding: 1.5em;
-    margin: 1.5em auto;
+    margin: 1em;
+    padding: 2em;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align: center;
-    overflow: hidden;
+    vertical-align: top;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    height: 500px;
+    
 }
 
-.card img {
-    width: 100%;
-    max-width: 100%;
-    height: 400px;
-    object-fit: contain;
-    border-radius: 10px;
+
+/* 1. Colores hexadecimales */
+.card1 {
+    background-color: #ffe4e1; /* hex */
+    color: #333;
 }
 
+/* 2. Combinaciones RGB */
+.card2 {
+    background-color: rgb(173, 216, 230);
+    color: rgb(25, 25, 112);
+}
+
+.card3 {
+    background-color: rgb(240, 128, 128);
+    color: rgb(255, 255, 255);
+}
+
+.card4 {
+    background-color: rgb(144, 238, 144);
+    color: rgb(0, 100, 0);
+}
+
+.card5 {
+    background-color: rgb(255, 228, 181);
+    color: rgb(139, 69, 19);
+}
+
+/* 8. Gradiente lineal */
+.card3 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+/* 9. Gradiente radial */
+.card4 {
+    background: radial-gradient(circle, #89f7fe, #66a6ff);
+}
+
+/* 10. Estilos de texto */
 .card-title {
-    margin-top: 1em;
-    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+/* 12. Tamaño y estilo de fuente */
 .card p {
-    font-size: 1rem;
-    margin-top: 1em;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
 }
 
-  /* Estilos individuales para las cards */
-
-.card1 {
-    background: #ffe4e1; /* Color hexadecimal */
-    color: rgb(220, 20, 60); /* RGB */
-    font-size: 24px;       /* Tamaño de la fuente */
-    font-style: italic;    /* Estilo itálico (cursiva) */
-    font-weight: 900; 
-}
-
-.card2 {
-    background: #e0ffff;
-    color: rgb(70, 130, 180);
-}
-
-.card3 {
-    background: #fafad2;
-    color: rgb(218, 165, 32);
-}
-
-.card4 {
-    background: #f0e68c;
-    color: rgb(46, 139, 87);
-}
-
-.card5 {
-    background: #dda0dd;
-    color: rgb(148, 0, 211);
-}
-
-.card6 {
-    background: #E2EEEC;
-    color: rgb(70, 176, 180);
-}
-.card7 {
-    background: #CFDBDA;
-    color: rgb(70, 114, 180);
-}
-.card8 {
-    background: #8AAAA5;
-    color: rgb(70, 109, 180);
-}
-.card9 {
-    background: #CABD9A;
-    color: rgb(165, 146, 62);
-}
-.card10 {
-    background: #A5956D;
-    color: rgb(224, 162, 103);
-}
-
-
-  /* Card con gradiente lineal */
-.card-gradient-linear {
-    background: linear-gradient(100deg, #F9D664, #FDE7CF);
-    color: white;
-    border: 3px solid #f1f1f1;
-}
-
-  /* Card con gradiente radial */
-.card-gradient-radial {
-    background: radial-gradient(circle, #89f7fe, #66a6ff);
-    color: white;
-}
-
-
+/* 13. Uso de rem */
 .card p {
-    margin: 1em 0;
-    padding: 0.5em;
+    font-size: 1rem; /* rem relativo al root */
 }
+
+/* 14. Uso de em para márgenes y paddings */
+.card {
+    margin: 1em;
+    padding: 2em;
+}
+
+/* 16. Usar vh y vw ya aplicado en .galeria */
+
+/* 17. Imagen con max-width y auto */
+.card img {
+    max-width: 100%;
+    height: 65%;
+    object-fit: contain; /* 18. Manipulación visual */
+    border-radius: 10px;
+
+}   
